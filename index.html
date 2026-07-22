@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kirim Notifikasi</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="theme-color" content="#059669">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Admin Notif">
+<meta name="mobile-web-app-capable" content="yes">
+<script>
+(function(){
+  var __scope = location.href.substring(0, location.href.lastIndexOf('/')+1);
+  var manifest = {
+    name: "Admin Notifikasi Warung", short_name: "Admin Notif", start_url: location.href, scope: __scope,
+    display: "standalone", background_color: "#F0F4F2", theme_color: "#059669", orientation: "portrait",
+    icons: [
+      {src:"data:image/png;base64,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", sizes:"192x192", type:"image/png", purpose:"any"},
+      {src:"data:image/png;base64,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", sizes:"512x512", type:"image/png", purpose:"any"},
+      {src:"data:image/png;base64,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", sizes:"512x512", type:"image/png", purpose:"maskable"}
+    ]
+  };
+  var __link=document.createElement('link'); __link.rel='manifest';
+  __link.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(manifest));
+  document.head.appendChild(__link);
+  if('serviceWorker' in navigator){
+    var __swCode="self.addEventListener('install',function(e){self.skipWaiting();});self.addEventListener('activate',function(e){e.waitUntil(self.clients.claim());});self.addEventListener('fetch',function(e){e.respondWith(fetch(e.request).catch(function(){return caches.match(e.request);}));});";
+    var __swUrl=URL.createObjectURL(new Blob([__swCode],{type:'application/javascript'}));
+    navigator.serviceWorker.register(__swUrl,{scope:__scope}).catch(function(err){console.warn('SW gagal daftar:',err);});
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#059669;--primary-dark:#047857;--primary-light:#10B981;--primary-glow:rgba(5,150,105,0.18);
+  --bg:#F0F4F2;--surface:#fff;--surface-2:#F8FAF9;
+  --text:#0D1F1A;--text-2:#4B6B5E;--text-muted:#98B4A8;
+  --danger:#EF4444;--danger-dark:#DC2626;
+  --border:#DDE8E4;
+  --shadow-xs:0 1px 3px rgba(0,0,0,.06);
+  --shadow-sm:0 2px 8px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:0 4px 16px rgba(0,0,0,.09),0 2px 4px rgba(0,0,0,.05);
+  --r-sm:10px;--r-md:14px;--r-lg:20px;--r-xl:26px;
+  --tr:all .3s cubic-bezier(.4,0,.2,1);
+  --font:'Plus Jakarta Sans',sans-serif;--mono:'Space Mono',monospace;
+}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;padding-bottom:48px}
+img{display:block;max-width:100%}
+button{font-family:inherit;border:none;background:none;cursor:pointer}
+input,textarea{font-family:inherit}
+
+/* HEADER (disamain kaya subpage-header di kasir) */
+.header{position:sticky;top:0;z-index:10;background:var(--primary-dark);height:58px;display:flex;align-items:center;padding:0 18px;gap:12px;box-shadow:0 2px 12px rgba(4,120,87,.35)}
+.header-icon{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.header-icon svg{width:19px;height:19px;stroke:#fff;fill:none}
+.header-title{font-size:16px;font-weight:800;color:#fff;letter-spacing:.3px}
+.header-sub{font-size:11px;color:rgba(255,255,255,.75);font-weight:600;margin-top:1px}
+
+.wrap{padding:18px 16px 0;max-width:520px;margin:0 auto}
+
+/* CARD & FORM (disamain persis kaya form tambah produk kasir) */
+.card{background:var(--surface);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow-sm);margin-bottom:18px}
+.card-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:3px}
+.card-sub{font-size:12px;color:var(--text-2);margin-bottom:18px}
+
+.form-group{margin-bottom:16px}
+.form-label{display:block;font-size:12px;font-weight:700;color:var(--text-2);margin-bottom:6px;letter-spacing:.4px;text-transform:uppercase}
+.form-input,.form-textarea{width:100%;padding:13px 15px;font-size:15px;border:1.5px solid var(--border);border-radius:var(--r-sm);background:var(--surface-2);color:var(--text);transition:var(--tr);font-family:var(--font);-webkit-appearance:none}
+.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 4px var(--primary-glow)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
+.form-textarea{resize:none;min-height:96px;line-height:1.5}
+.char-count{text-align:right;font-size:10.5px;color:var(--text-muted);margin-top:5px;font-family:var(--mono)}
+
+/* UPLOAD FOTO — kotak dashed, sama gayanya kaya di kasir */
+.cover-upload{position:relative;width:100%;aspect-ratio:16/8;border:2px dashed var(--border);border-radius:var(--r-md);background:var(--surface-2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;overflow:hidden;transition:var(--tr)}
+.cover-upload:active{transform:scale(.99)}
+.cover-upload.has-image{aspect-ratio:auto;border-style:solid;border-color:var(--border)}
+.cover-upload svg{stroke:var(--text-muted)}
+.cover-upload span{font-size:12.5px;font-weight:700;color:var(--text-2)}
+.cover-upload small{font-size:11px;color:var(--text-muted)}
+.cover-preview{position:relative;width:100%;height:auto;max-height:320px;object-fit:contain;display:none}
+.cover-upload.has-image .cover-preview{display:block}
+.cover-upload.has-image .cover-placeholder{display:none}
+.cover-remove{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;background:rgba(13,31,26,.65);display:none;align-items:center;justify-content:center;z-index:2}
+.cover-upload.has-image .cover-remove{display:flex}
+.cover-remove svg{width:15px;height:15px;stroke:#fff}
+
+.btn-primary{width:100%;padding:15px;border-radius:var(--r-md);background:var(--primary);color:#fff;font-size:14.5px;font-weight:800;box-shadow:0 6px 18px rgba(5,150,105,.3);transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary:active{transform:scale(.98);background:var(--primary-dark)}
+.btn-primary:disabled{background:var(--border);color:var(--text-muted);box-shadow:none}
+.inline-feedback{margin-top:12px;padding:11px 14px;border-radius:var(--r-sm);font-size:12.5px;font-weight:700;text-align:center;display:none}
+.inline-feedback.show{display:block}
+.inline-feedback.success{background:var(--primary-glow);color:var(--primary-dark)}
+.inline-feedback.error{background:rgba(239,68,68,.1);color:var(--danger-dark)}
+
+/* RIWAYAT */
+.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding:0 2px}
+.section-title h3{font-size:14px;font-weight:800;color:var(--text)}
+.section-title span{font-size:11.5px;font-weight:700;color:var(--text-2);font-family:var(--mono)}
+
+.notif-card{background:var(--surface);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-xs);margin-bottom:12px;border:1px solid var(--border)}
+.notif-card-img{width:100%;height:auto;max-height:320px;object-fit:contain;background:var(--surface-2);display:block}
+.notif-card-body{padding:14px 15px}
+.notif-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.notif-card-title{font-size:13.5px;font-weight:800;color:var(--text);line-height:1.35}
+.notif-card-del{width:30px;height:30px;border-radius:9px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--tr)}
+.notif-card-del:active{background:rgba(239,68,68,.12)}
+.notif-card-del svg{width:14px;height:14px;stroke:var(--text-muted)}
+.notif-card-msg{font-size:12.5px;color:var(--text-2);line-height:1.55;margin-top:5px;white-space:pre-wrap}
+.notif-card-time{font-size:10.5px;color:var(--text-muted);margin-top:9px;font-family:var(--mono);display:flex;align-items:center;gap:5px}
+
+.empty-state{padding:50px 20px;text-align:center;color:var(--text-2)}
+.empty-state svg{stroke:var(--text-muted);margin-bottom:12px}
+.empty-state h3{font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px}
+.empty-state p{font-size:12px;line-height:1.5}
+
+.loading-ring{width:26px;height:26px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;margin:30px auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Modal konfirmasi hapus (bukan overlay ngambang, ini modal beneran perlu konfirmasi) */
+.confirm-modal{display:none;position:fixed;inset:0;background:rgba(13,31,26,.5);z-index:200;align-items:center;justify-content:center;padding:24px}
+.confirm-modal.active{display:flex}
+.confirm-box{background:var(--surface);border-radius:var(--r-lg);padding:22px;max-width:320px;width:100%;box-shadow:var(--shadow-md)}
+.confirm-box h4{font-size:15px;font-weight:800;margin-bottom:6px}
+.confirm-box p{font-size:12.5px;color:var(--text-2);line-height:1.5;margin-bottom:18px}
+.confirm-actions{display:flex;gap:10px}
+.confirm-actions button{flex:1;padding:12px;border-radius:var(--r-sm);font-size:13px;font-weight:700}
+.confirm-cancel{background:var(--surface-2);color:var(--text-2)}
+.confirm-delete{background:var(--danger);color:#fff}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+  </div>
+  <div>
+    <div class="header-title">Kirim Notifikasi</div>
+    <div class="header-sub" id="targetLabel">Tersambung ke kasir &amp; toko online</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="card">
+    <div class="card-title">Buat Pengumuman Baru</div>
+    <div class="card-sub">Otomatis muncul real-time di kasir dan toko online begitu dikirim</div>
+
+    <div class="form-group">
+      <label class="form-label">Foto Sampul (Opsional)</label>
+      <div class="cover-upload" id="coverUpload">
+        <img class="cover-preview" id="coverPreview" alt="Sampul notifikasi">
+        <div class="cover-remove" id="coverRemove">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </div>
+        <div class="cover-placeholder">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.7"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Tap untuk tambah foto</span>
+          <small>Format horizontal, cocok buat banner</small>
+        </div>
+      </div>
+      <input type="file" id="coverInput" accept="image/*" style="display:none">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Judul</label>
+      <input type="text" class="form-input" id="notifTitle" placeholder="Contoh: Promo Akhir Pekan" maxlength="60">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Isi Pesan</label>
+      <textarea class="form-textarea" id="notifMessage" placeholder="Tulis isi pengumuman di sini..." maxlength="280"></textarea>
+      <div class="char-count"><span id="charCount">0</span>/280</div>
+    </div>
+
+    <button class="btn-primary" id="sendBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      Kirim Notifikasi
+    </button>
+    <div class="inline-feedback" id="feedback"></div>
+  </div>
+
+  <div class="section-title">
+    <h3>Riwayat Terkirim</h3>
+    <span id="historyCount">0</span>
+  </div>
+  <div id="historyList"><div class="loading-ring"></div></div>
+</div>
+
+<div class="confirm-modal" id="confirmModal">
+  <div class="confirm-box">
+    <h4>Hapus notifikasi ini?</h4>
+    <p>Notifikasi akan langsung hilang dari kasir dan toko online. Tindakan ini gak bisa dibatalin.</p>
+    <div class="confirm-actions">
+      <button class="confirm-cancel" id="confirmCancelBtn">Batal</button>
+      <button class="confirm-delete" id="confirmDeleteBtn">Hapus</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy, limit, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDztQD-U1k8Oz1Vnw7z3yUKzSzSP0RN1vg",
+  authDomain: "kasir-warung-c9479.firebaseapp.com",
+  projectId: "kasir-warung-c9479",
+  storageBucket: "kasir-warung-c9479.firebasestorage.app",
+  messagingSenderId: "765164639630",
+  appId: "1:765164639630:web:cfbb517dc737bf6de080df",
+  measurementId: "G-KV34P2EBMS"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+// Koleksi yang sama persis dibaca real-time oleh kasir & toko online.
+const notifCol = collection(db, 'toko_notifications');
+
+window.__db = db;
+window.__notifCol = notifCol;
+window.__addDoc = addDoc;
+window.__deleteDoc = deleteDoc;
+window.__doc = doc;
+window.__serverTimestamp = serverTimestamp;
+
+const notifQuery = query(notifCol, orderBy('createdAt','desc'), limit(50));
+onSnapshot(notifQuery, (snap)=>{
+  window.__history = snap.docs.map(d=>({id:d.id, ...d.data()}));
+  window.renderHistory && window.renderHistory();
+}, (err)=>{
+  console.error('Gagal ambil riwayat notifikasi:', err);
+  const el=document.getElementById('historyList');
+  if(el) el.innerHTML = '<div class="empty-state"><p>Gagal memuat riwayat. Cek koneksi internet.</p></div>';
+});
+</script>
+
+<script>
+let coverImageData = null;
+
+// ===== UPLOAD FOTO SAMPUL =====
+const coverUpload = document.getElementById('coverUpload');
+const coverInput = document.getElementById('coverInput');
+const coverPreview = document.getElementById('coverPreview');
+const coverRemove = document.getElementById('coverRemove');
+
+coverUpload.addEventListener('click', (e)=>{
+  if(e.target.closest('#coverRemove')) return;
+  coverInput.click();
+});
+coverInput.addEventListener('change', (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev)=>{
+    const img = new Image();
+    img.onload = ()=>{
+      // Resize jadi horizontal (maks lebar 900px), biar file gak kegedean buat disimpan.
+      const maxW = 900;
+      let w = img.width, h = img.height;
+      if(w > maxW){ h = Math.round(h * maxW / w); w = maxW; }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      coverImageData = canvas.toDataURL('image/jpeg', 0.75);
+      coverPreview.src = coverImageData;
+      coverUpload.classList.add('has-image');
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+coverRemove.addEventListener('click', (e)=>{
+  e.stopPropagation();
+  coverImageData = null;
+  coverInput.value = '';
+  coverUpload.classList.remove('has-image');
+});
+
+// ===== HITUNG KARAKTER PESAN =====
+const notifMessage = document.getElementById('notifMessage');
+const charCount = document.getElementById('charCount');
+notifMessage.addEventListener('input', ()=>{
+  charCount.textContent = notifMessage.value.length;
+});
+
+// ===== KIRIM NOTIFIKASI =====
+const sendBtn = document.getElementById('sendBtn');
+const feedback = document.getElementById('feedback');
+const notifTitle = document.getElementById('notifTitle');
+
+function showFeedback(type, msg){
+  feedback.className = 'inline-feedback show ' + type;
+  feedback.textContent = msg;
+  setTimeout(()=>{ feedback.classList.remove('show'); }, 3200);
+}
+
+sendBtn.addEventListener('click', async ()=>{
+  const title = notifTitle.value.trim();
+  const message = notifMessage.value.trim();
+  if(!title || !message){
+    showFeedback('error', 'Judul dan pesan wajib diisi');
+    return;
+  }
+  sendBtn.disabled = true;
+  sendBtn.textContent = 'Mengirim...';
+  try{
+    await window.__addDoc(window.__notifCol, {
+      title, message,
+      image: coverImageData || null,
+      createdAt: window.__serverTimestamp()
+    });
+    notifTitle.value=''; notifMessage.value=''; charCount.textContent='0';
+    coverImageData=null; coverInput.value=''; coverUpload.classList.remove('has-image');
+    showFeedback('success', 'Notifikasi terkirim, langsung tayang di kasir & toko online');
+  }catch(e){
+    console.error('Gagal kirim notifikasi:', e);
+    showFeedback('error', 'Gagal mengirim, coba lagi');
+  }
+  sendBtn.disabled = false;
+  sendBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Kirim Notifikasi';
+});
+
+// ===== RIWAYAT =====
+window.__history = [];
+function fmtTime(ts){
+  if(!ts || !ts.toMillis) return 'Baru saja';
+  const d = new Date(ts.toMillis());
+  return d.toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'}) + ' • ' + d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+}
+function renderHistory(){
+  const list = window.__history || [];
+  const container = document.getElementById('historyList');
+  document.getElementById('historyCount').textContent = list.length;
+  if(!list.length){
+    container.innerHTML = `<div class="empty-state">
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <h3>Belum ada notifikasi terkirim</h3>
+      <p>Notifikasi yang kamu kirim bakal muncul di sini</p>
+    </div>`;
+    return;
+  }
+  container.innerHTML = list.map(n => `
+    <div class="notif-card">
+      ${n.image ? `<img class="notif-card-img" src="${n.image}" alt="Sampul">` : ''}
+      <div class="notif-card-body">
+        <div class="notif-card-top">
+          <div class="notif-card-title">${(n.title||'').replace(/</g,'&lt;')}</div>
+          <button class="notif-card-del" onclick="openDeleteConfirm('${n.id}')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </div>
+        <div class="notif-card-msg">${(n.message||'').replace(/</g,'&lt;')}</div>
+        <div class="notif-card-time">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${fmtTime(n.createdAt)}
+        </div>
+      </div>
+    </div>`).join('');
+}
+window.renderHistory = renderHistory;
+
+// ===== HAPUS NOTIFIKASI =====
+let pendingDeleteId = null;
+const confirmModal = document.getElementById('confirmModal');
+function openDeleteConfirm(id){
+  pendingDeleteId = id;
+  confirmModal.classList.add('active');
+}
+window.openDeleteConfirm = openDeleteConfirm;
+document.getElementById('confirmCancelBtn').addEventListener('click', ()=>{
+  confirmModal.classList.remove('active'); pendingDeleteId=null;
+});
+document.getElementById('confirmDeleteBtn').addEventListener('click', async ()=>{
+  if(!pendingDeleteId) return;
+  try{
+    await window.__deleteDoc(window.__doc(window.__db, 'toko_notifications', pendingDeleteId));
+  }catch(e){ console.error('Gagal hapus notifikasi:', e); }
+  confirmModal.classList.remove('active'); pendingDeleteId=null;
+});
+
+renderHistory();
+</script>
+</body>
+</html>
